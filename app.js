@@ -115,7 +115,7 @@ function qty(k,n){k=decodeURIComponent(k);if(!cart[k])return;cart[k].qty+=n;if(c
 function removeIt(k){let n=decodeURIComponent(k);delete cart[n];renderCart()}
 function clearCart(){cart={};renderCart()}
 function review(){if(!Object.keys(cart).length)return;$('reviewItems').innerHTML=Object.values(cart).map(x=>`<div class="cartline"><div><b>${x.qty} × ${x.name}</b></div><strong>S/${x.qty*x.price}</strong></div>`).join('');hide('cartModal');show('reviewModal');update()}
-function sendWA(){let m='*PEDIDO KIMSU ROLLS*%0A%0A';Object.values(cart).forEach(x=>m+=`${x.qty} x ${x.name} — S/${x.qty*x.price}%0A`);let t=Object.values(cart).reduce((s,x)=>s+x.qty*x.price,0);window.open(`https://wa.me/${WA}?text=${m}%0A*TOTAL: S/${t}*`,'_blank')}
+function sendWA(){let m='PEDIDO KIMSU ROLLS%0A%0A';Object.values(cart).forEach(x=>m+=`${x.qty} x ${x.name} — S/${x.qty*x.price}%0A`);let t=Object.values(cart).reduce((s,x)=>s+x.qty*x.price,0);window.open(`https://wa.me/${WA}?text=${m}%0A*TOTAL: S/${t}*`,'_blank')}
 $('makisGrid').innerHTML=makis.map(x=>`<article class="card"><h3>${x} <b>S/22</b></h3><p>${makiDescriptions[x]}</p><button onclick="add('${x}',22)">+ AÑADIR</button></article>`).join('');
 update();
 window.addEventListener('scroll',()=>{['entradas','makis','ramen','alitas','combos','bebidas'].forEach((id,i)=>{if(scrollY+130>=$(id).offsetTop)document.querySelectorAll('.cats button').forEach((b,j)=>b.classList.toggle('active',i===j))})});
