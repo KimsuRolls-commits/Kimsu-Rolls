@@ -1,0 +1,51 @@
+<!doctype html><html lang="es"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kimsu Rolls® | Carta Online</title><link rel="stylesheet" href="styles.css"></head><body>
+<header class="hero">
+<img class="logo" src="logo.png" alt="Kimsu Rolls">
+<div class="loc">📍 SAN MARTÍN DE PORRES</div><div class="contact">WhatsApp · 997 454 391 &nbsp; | &nbsp; 963 204 805</div>
+<div class="about"><h2>¿Quiénes somos?</h2><p>Somos un emprendimiento gastronómico especializado en la preparación de makis con un estilo propio. Hechos con dedicación, buenos ingredientes y mucho cariño. Nacimos con la idea de compartir nuestra pasión por la gastronomía Nikkei y ofrecer sabores que puedan disfrutar tanto los amantes de los makis como quienes quieren descubrir algo nuevo.</p></div>
+<div class="links"><a href="https://www.instagram.com/kimsu.rolls?igsi=Y3VwMTVwaWRra3d3&utm_source=qr" target="_blank" rel="noopener">📷 Instagram</a><a href="https://www.tiktok.com/@kimsu.rolls?_r=1&_t=ZS-995Fhhuvgmr" target="_blank" rel="noopener">🎵 TikTok</a><a href="https://www.facebook.com/share/1BnZ4pJsNg/?mibextid=wwXIfr" target="_blank" rel="noopener">📘 Facebook</a><a href="https://www.rappi.com.pe/restaurantes/delivery/75146-kimsu-rolls?utm_source=app&utm_medium=deeplink&utm_campaign=share" target="_blank" rel="noopener">🛵 Rappi</a><a href="https://www.pedidosya.com.pe/restaurantes/lima/kimsu-rolls-b72c063b-fd40-494f-930d-1df004a15884-menu" target="_blank" rel="noopener">🛍️ PedidosYa</a><a href="https://maps.app.goo.gl/VcjQaagYDjQq2ZQB9?g_st=ic" target="_blank" rel="noopener">📍 Google Maps</a></div>
+</header>
+<nav class="cats"><button class="active" onclick="go('entradas',this)">🥟 Entradas</button><button onclick="go('makis',this)">🍣 Makis</button><button onclick="go('ramen',this)">🍜 Ramen</button><button onclick="go('alitas',this)">🍗 Alitas</button><button onclick="go('combos',this)">🍱 Combos</button><button onclick="go('bebidas',this)">🥤 Bebidas</button></nav>
+<main>
+<section id="entradas" class="section"><div class="title"><h2>Entradas</h2><span>Para comenzar</span></div><div class="grid">
+<article class="card"><h3>Ebi Furai x4 <b>S/20</b></h3><p>Crujientes y preparados al momento.</p><button onclick="add('Ebi Furai x4',20)">+ AÑADIR</button></article>
+<article class="card"><h3>Rollitos Primavera x4 <b>S/15</b></h3><p>Crujientes rollitos para compartir.</p><button onclick="add('Rollitos Primavera x4',15)">+ AÑADIR</button></article>
+<article class="card"><h3>Wantanes de Cerdo x6 <b>S/10</b></h3><p>Rellenos de cerdo y fritos.</p><button onclick="add('Wantanes de Cerdo x6',10)">+ AÑADIR</button></article>
+<article class="card"><h3>Gyozas x6 <b>S/15</b></h3><p>Elige Fritas o Al Vapor.</p><button onclick="gyoza()">ELEGIR</button></article></div></section>
+
+<section id="makis" class="section"><div class="title"><h2>Makis</h2><span>10 piezas · S/22</span></div><div id="makisGrid" class="grid"></div></section>
+
+<section id="ramen" class="section"><div class="title"><h2>Ramen</h2><span>Caldos estilo Nikkei</span></div><div class="grid">
+<article class="card"><h3>Shoyu Ramen <b>S/26</b></h3><p>Caldo a base de pollo, res y cerdo.<br>Ramen con base de salsa shoyu, rodajas de cerdo, huevo sancochado, frejol chino, cebolla china y fideos ramen.</p><button onclick="add('Shoyu Ramen',26)">+ AÑADIR</button></article>
+<article class="card"><h3>Tori Ramen <b>S/26</b></h3><p>Caldo a base de pollo, res y cerdo.<br>Rodajas de pollo, huevo sancochado, frejol chino, cebolla china y fideos ramen.</p><button onclick="add('Tori Ramen',26)">+ AÑADIR</button></article></div></section>
+
+<section id="alitas" class="section"><div class="title"><h2>Alitas</h2><span>S/15</span></div><div class="grid">
+<div class="card"><h3>Acevichadas <b>S/15</b></h3><p>6 und de alitas bañadas en salsa Acevichada.</p><button onclick="add('Alitas Acevichadas',15)">+ AÑADIR</button></div>
+<div class="card"><h3>BBQ <b>S/15</b></h3><p>6 und de alitas bañadas en salsa Bbq</p><button onclick="add('Alitas BBQ',15)">+ AÑADIR</button></div>
+<div class="card"><h3>Búfalo <b>S/15</b></h3><p>6 und de alitas bañadas en salsa Búfalo</p><button onclick="add('Alitas Búfalo',15)">+ AÑADIR</button></div>
+<div class="card"><h3>Maracuyá <b>S/15</b></h3><p>6 und de alitas bañadas en salsa Maracuya</p><button onclick="add('Alitas Maracuyá',15)">+ AÑADIR</button></div>
+<div class="card"><h3>Crispy <b>S/15</b></h3><p>6 und de alitas con el crocante tradicional</p><button onclick="add('Alitas Crispy',15)">+ AÑADIR</button></div>
+<div class="card"><h3>Adicional de papas <b>S/5</b></h3><button onclick="add('Adicional de papas',5)">+ AÑADIR</button></div></div></section>
+
+<section id="combos" class="section"><div class="title"><h2>Combos</h2><span>Personalízalos</span></div><div class="grid">
+<div class="card featured"><h3>Combo Personal <b>S/25</b></h3><p>10 piezas · 1 sabor + 1 gaseosa.</p><button onclick="combo('personal')">ELEGIR COMBO</button></div>
+<div class="card featured"><h3>Combo Sakura <b>S/38</b></h3><p>20 piezas · 2 sabores + 1 gaseosa.</p><button onclick="combo('sakura')">ELEGIR COMBO</button></div>
+<div class="card featured"><h3>Combo Koi <b>S/58</b></h3><p>30 piezas · 3 sabores + 1 gaseosa.</p><button onclick="combo('koi')">ELEGIR COMBO</button></div>
+<div class="card featured"><h3>Combo Shogun <b>S/78</b></h3><p>40 piezas · 4 sabores + 1 gaseosa.</p><button onclick="combo('shogun')">ELEGIR COMBO</button></div>
+<div class="card featured"><h3>Combo Akai <b>S/95</b></h3><p>50 piezas · 5 sabores + 2 gaseosas.</p><button onclick="combo('akai')">ELEGIR COMBO</button></div>
+<div class="card featured"><h3>Combo Fuji <b>S/125</b></h3><p>70 piezas · 7 sabores + 3 gaseosas.</p><button onclick="combo('fuji')">ELEGIR COMBO</button></div></div></section>
+
+<section id="bebidas" class="section"><div class="title"><h2>Bebidas</h2><span>Para acompañar</span></div><div class="grid">
+<div class="card"><h3>Coca Cola Original <b>S/5</b></h3><button onclick="add('Coca Cola Original',5)">+ AÑADIR</button></div><div class="card"><h3>Coca Cola Zero <b>S/5</b></h3><button onclick="add('Coca Cola Zero',5)">+ AÑADIR</button></div>
+<div class="card"><h3>Inca Kola Original <b>S/5</b></h3><button onclick="add('Inca Kola Original',5)">+ AÑADIR</button></div><div class="card"><h3>Inca Kola Zero <b>S/5</b></h3><button onclick="add('Inca Kola Zero',5)">+ AÑADIR</button></div>
+<div class="card"><h3>Agua San Luis S/Gas <b>S/4</b></h3><button onclick="add('Agua San Luis S/Gas',4)">+ AÑADIR</button></div></div></section>
+</main>
+<div id="toast" role="status" aria-live="polite"><span class="toastThumb" id="toastThumb">🍣</span><span class="toastText" id="toastText">Añadiste un producto al carrito</span></div><div id="miniCart" class="miniCart" aria-live="polite"><div class="miniHead"><b>Tu pedido</b><span><span id="miniCount">0</span> productos</span></div><div id="miniItems"></div><div class="miniFoot"><b>Total</b><strong id="miniTotal">S/0</strong></div><button class="miniOpen" onclick="openCart()">VER CARRITO</button></div><button id="bar" class="bar" onclick="toggleMiniCart()" aria-label="Ver pedido">🛒<span id="count">0</span></button>
+
+<div id="comboModal" class="modal"><div class="panel"><button class="close" onclick="hide('comboModal')">×</button><h2 id="comboTitle"></h2><p id="comboInfo"></p><h3>🍣 Makis <small id="mCount"></small></h3><p class="hint">Usa + y − para elegir cantidades. Puedes repetir sabores y gaseosas.</p><div id="mOptions" class="options"></div><h3>🥤 Gaseosas <small id="dCount"></small></h3><div id="dOptions" class="options"></div><div id="summary" class="summary"></div><button id="comboAdd" class="green" disabled onclick="confirmCombo()">COMPLETA TU SELECCIÓN</button></div></div>
+<div id="gyozaModal" class="modal"><div class="panel small"><button class="close" onclick="hide('gyozaModal')">×</button><h2>Gyozas x6</h2><p>¿Cómo las prefieres?</p><div class="two"><button onclick="addGyoza('Fritas')">🔥<b>Fritas</b></button><button onclick="addGyoza('Al Vapor')">♨️<b>Al Vapor</b></button></div><b>S/15</b></div></div>
+<div id="cartModal" class="modal"><div class="panel"><button class="close" onclick="hide('cartModal')">×</button><h2>🛒 Tu pedido</h2><div id="items"></div><div class="foot"><b>Total</b><strong>S/<span id="mtotal">0</span></strong></div><div class="actions"><button class="secondary" onclick="clearCart()">Vaciar carrito</button><button class="green" onclick="review()">Revisar pedido</button></div></div></div>
+<div id="reviewModal" class="modal"><div class="panel"><button class="close" onclick="hide('reviewModal')">×</button><h2>Confirmación</h2><p>Revisa tu pedido antes de enviarlo a WhatsApp.</p><div id="reviewItems"></div><div class="foot"><b>Total</b><strong>S/<span id="rtotal">0</span></strong></div><div class="actions"><button class="secondary" onclick="hide('reviewModal');openCart()">Modificar</button><button class="green" onclick="sendWA()">📲 Confirmar y enviar</button></div></div></div>
+<footer>Kimsu Rolls® | Todos los derechos reservados.</footer><script src="app.js"></script></body></html>
